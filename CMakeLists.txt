@@ -26,9 +26,9 @@ set(BASIC_SOURCES
 )
 add_executable(${PROJECT_NAME}_basic ${BASIC_SOURCES})
 
-set(EXTENDED_SOURCES
+set(PUBSUB_SOURCES
     ${COMMON_SOURCES}
     src/Broker.cpp
-    src/main_extended.cpp
+    src/main_pubsub.cpp
 )
-add_executable(${PROJECT_NAME}_extended ${EXTENDED_SOURCES})
+add_executable(${PROJECT_NAME}_pubsub ${PUBSUB_SOURCES})
