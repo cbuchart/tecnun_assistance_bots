@@ -5,6 +5,9 @@
 
 namespace tecnun
 {
+    /**
+     * Bot for agenda.
+     */
     struct CalendarBot : IBot
     {
         using IBot::IBot;

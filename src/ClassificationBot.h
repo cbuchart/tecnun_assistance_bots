@@ -5,6 +5,9 @@
 
 namespace tecnun
 {
+    /**
+     * Bot for classification (tags and mentions).
+     */
     struct ClassificationBot : IBot
     {
         using IBot::IBot;

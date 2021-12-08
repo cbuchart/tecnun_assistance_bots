@@ -7,6 +7,9 @@
 
 namespace tecnun
 {
+    /**
+     * Bot interface.
+     */
     struct IBot
     {
         std::shared_ptr<Note> note;

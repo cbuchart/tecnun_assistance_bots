@@ -8,6 +8,9 @@
 
 namespace tecnun
 {
+    /**
+     * Class to associate a bot with a thread.
+     */
     struct BotWorker
     {
         std::shared_ptr<IBot> bot;

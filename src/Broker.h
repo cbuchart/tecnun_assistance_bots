@@ -14,18 +14,39 @@
 
 namespace tecnun
 {
+    /**
+     * Broker for notes.
+     */
     class Broker
     {
       public:
+        /**
+         * Callback receives a note.
+         */
         using callback_t = std::function<void(std::shared_ptr<Note>)>;
 
         Broker();
         ~Broker();
 
+        /**
+         * Publish a message on a topic.
+         *
+         * @param p_topic The topic (case sensitive).
+         * @param p_message Message to publish.
+         */
         void publish(std::string const& p_topic, std::shared_ptr<Note> p_message);
 
+        /**
+         * Subscribe a callback to a topic
+         *
+         * @param p_topic The topic (case sensitive).
+         * @param p_function Callback to execute when a message is received.
+         */
         void subscribe(std::string const& p_topic, callback_t p_function);
 
+        /**
+         * Wait for joining all the running threads.
+         */
         void join_all();
 
       protected:

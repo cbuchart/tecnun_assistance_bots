@@ -5,6 +5,9 @@
 
 namespace tecnun
 {
+    /**
+     * General date type.
+     */
     struct Date
     {
         uint8_t day;
