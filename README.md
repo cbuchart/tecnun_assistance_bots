@@ -1,5 +1,7 @@
 # A solution for the Assistance Bots project
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc11443d2d3e47b593ee2b59c05bb1d8)](https://app.codacy.com/gh/cbuchart/tecnun_assistance_bots?utm_source=github.com&utm_medium=referral&utm_content=cbuchart/tecnun_assistance_bots&utm_campaign=Badge_Grade_Settings)
+
 ## Statement
 
 Read the complete statement [here](https://github.com/cbuchart/operating_systems_lectures/blob/master/src/AssistanceBots/README.md).
