@@ -48,6 +48,4 @@ int main()
             }
         }
     }
-
-    running_bots.clear();
 }

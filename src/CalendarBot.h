@@ -12,6 +12,10 @@ namespace tecnun
         void run() override;
 
         static void print_notes_with_date(Notes const& p_notes, Date const& p_date);
+
+        void run_using_regex();
+
+        void run_with_manual_search();
     };
 }
 
