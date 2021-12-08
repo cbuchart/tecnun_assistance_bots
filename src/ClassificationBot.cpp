@@ -6,9 +6,9 @@ namespace
 {
     std::pair<std::string, size_t> extract_token(std::string const& str, size_t pos)
     {
-        static constexpr auto const valid_characters = "abcedfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        constexpr auto VALID_CHARACTERS = "abcedfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-        auto const end = str.find_first_not_of(valid_characters, pos + 1);
+        auto const end = str.find_first_not_of(VALID_CHARACTERS, pos + 1);
         auto const token = str.substr(pos + 1, end - pos - 1);
 
         return {token, end};
@@ -17,7 +17,9 @@ namespace
 
 void tecnun::ClassificationBot::run()
 {
-    auto pos = note->text.find_first_of("#@");
+    constexpr auto MARKERS = "#@";
+
+    auto pos = note->text.find_first_of(MARKERS);
     while (pos < note->text.size()) {
         if (note->text[pos] == '#') {
             auto const [tag, next] = extract_token(note->text, pos);
@@ -31,7 +33,7 @@ void tecnun::ClassificationBot::run()
             ++pos;
         }
 
-        if (pos < note->text.size()) pos = note->text.find_first_of("#@", pos);
+        if (pos < note->text.size()) { pos = note->text.find_first_of(MARKERS, pos); }
     }
 }
 
